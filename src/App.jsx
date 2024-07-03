@@ -1,26 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import React, { useState, useEffect } from 'react'
 import './App.css'
-
+import Signup from './Pages/Signup';
+import Loading from './Features/Loading';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 function App() {
-  const [framework, setFramework] = useState('React')
+  const [loading, setLoading] = useState(true);
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000); 
+
+    return () => clearTimeout(timer); 
+  }, []);
+
+  if (loading) {
+    return <Loading />;
+  }
   return (
-    <div className="App">
-      <h1>Choose your favorite JavaScript framework</h1>
-      <div className=" flex justify-center gap-8">
-        <button onClick={() => setFramework('React')}>
-          <img src={reactLogo} alt="React logo" />
-          React
-        </button>
-        <button onClick={() => setFramework('Vite')}>
-          <img src={viteLogo} alt="Vite logo" />
-          Vite
-        </button>
-      </div>
-      <h2>You've chosen {framework}!</h2>
-    </div>
+    <main className='min-h-screen bg-[#121223]'>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Signup />} />
+        </Routes>
+      </BrowserRouter>
+    </main>
   )
 }
 

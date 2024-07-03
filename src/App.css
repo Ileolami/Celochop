@@ -1,7 +1,16 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
+@keyframes moveRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%); /* Adjust the value to control the distance */
+  }
+}
+.animate-moveRight {
+  animation: moveRight 5s infinite linear; /* Adjust time and other properties as needed */
+}
