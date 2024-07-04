@@ -27,7 +27,7 @@ const Signup = () => {
           <div className="relative bg-[#F0F5FA] rounded-md">
             <input type={showPassword ? 'text' : 'password'}
               name="Password" 
-              id="Password" 
+              id="PasswordO" 
               className=' px-5 bg-transparent m-1 outline-none h-14'/>
             <button type="button" onClick={togglePassword} className="absolute inset-y-0 right-0 pr-5 flex items-center">
               <FontAwesomeIcon icon={showPassword ? faEyeSlash : faEye} />
@@ -38,7 +38,7 @@ const Signup = () => {
           <div className="relative bg-[#F0F5FA] rounded-md">
             <input type={showConfirmPassword ? 'text' : 'password'}
               name="Password" 
-              id="Password" 
+              id="PasswordT" 
               className=' px-5 bg-transparent m-1  outline-none h-14'/>
             <button type="button" onClick={toggleConfirmPassword} className="absolute inset-y-0 right-0 pr-5 flex items-center">
               <FontAwesomeIcon icon={showConfirmPassword ? faEyeSlash : faEye} />
