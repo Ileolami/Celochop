@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import './App.css'
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
 import Signup from './Pages/Signup';
 import Loading from './Features/Loading';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -18,7 +20,10 @@ function App() {
     return <Loading />;
   }
   return (
-    <main className='min-h-screen bg-[#121223]'>
+    <main className='min-h-screen house'>
+      <div>
+        
+      </div>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Signup />} />
@@ -26,6 +31,7 @@ function App() {
       </BrowserRouter>
     </main>
   )
+  
 }
 
 export default App
