@@ -4,6 +4,7 @@ import './App.css';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Loading from './Features/Loading';
+import Connectwallet from './Pages/Connectwallet';
 
 
 function App() {
@@ -22,9 +23,9 @@ function App() {
   }
   return (
     <main className='min-h-screen house'>
-      <div>
-        
-      </div>
+      <nav>
+        <Connectwallet />
+      </nav>
       <BrowserRouter>
         <Routes>
           <Route path='/' element={<Signup />} />
