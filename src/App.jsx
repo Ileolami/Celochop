@@ -4,7 +4,7 @@ import './App.css';
 import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Loading from './Features/Loading';
-import Connectwallet from './Pages/Connectwallet';
+import Connectwallet from './Features/Connectwallet';
 
 
 function App() {

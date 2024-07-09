@@ -14,8 +14,7 @@ const Login = () => {
     return (
       <div className='flex flex-col justify-end items-center shadow-lg shadow-white'>
         <form action="" className='mx-20 my-10 bg-white text-[#32343E] rounded-2xl w-96'>
-          <div className='flex flex-col m-5 gap-2'>
-           
+          <div className='flex flex-col m-5 gap-2'>        
             <label htmlFor="Email" className='ml-5'>EMAIL</label>
             <input type="email" name="Email" id="Email" className=' px-5 bg-[#F0F5FA] rounded-md m-2 outline-none h-16'/>
             
