@@ -5,6 +5,7 @@ import Signup from './Pages/Signup';
 import Login from './Pages/Login';
 import Loading from './Features/Loading';
 import Connectwallet from './Features/Connectwallet';
+import Search from './Pages/Search';
 
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
   }
   return (
     <main className='min-h-screen house'>
-      <nav>
+      <nav className='mb-5'>
         <Connectwallet />
       </nav>
       <BrowserRouter>
@@ -31,6 +32,7 @@ function App() {
           <Route path='/' element={<Signup />} />
           <Route path='/signup' element={<Signup />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/search' element={<Search />} />
         </Routes>
       </BrowserRouter>
     </main>

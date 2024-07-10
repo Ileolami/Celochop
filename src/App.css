@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
 #root {
   margin: 0 auto;
-  color: white;
+  color: #181C2E;
   background-color: #121223;
   font-family: "Sen", sans-serif;
 }
@@ -22,4 +22,7 @@
 }
 .animate-moveRight {
   animation: moveRight 6s infinite linear; /* Adjust time and other properties as needed */
+}
+.blur-effect {
+  filter: blur(8px);
 }
