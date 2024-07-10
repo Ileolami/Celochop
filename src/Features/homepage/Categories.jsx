@@ -28,7 +28,7 @@ const Categories = () => {
           </Link>
         </div>
 
-        <div className="flex justify-between items-center gap-x-4 -pr-4 w-fit overflow-auto py-3">
+        <div className="flex justify-between items-center gap-x-4 -pr-4 overflow-auto py-3">
           {["All", "Soups", "Pastas", "Pizza"].map((item) => (
             <CategoryCard food={item} key={item} />
           ))}

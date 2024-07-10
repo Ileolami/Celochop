@@ -8,7 +8,7 @@ import Recommended from "../Features/homepage/Recommended";
 
 const HomePage = () => {
   return (
-    <div className="">
+    <div className="bg-white mx-5 mb-10 p-5 min-h-screen rounded-2xl shadow-xl shadow-black">
       <Header />
       <Search />
       <Categories />

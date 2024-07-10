@@ -18,7 +18,7 @@ const Search = () => {
     setIsFilterModalOpen(!isFilterModalOpen);
   };
   return (
-    <div className='p-5 min-h-screen lg:p-20 bg-white rounded-2xl mx-5 lg:mx-10 flex flex-col gap-2 lg:gap-5'>
+    <div className='p-5 min-h-screen lg:p-20 bg-white text-[#121223] rounded-2xl mx-5 mb-4 lg:mx-10 flex flex-col gap-2 lg:gap-5'>
        <div className={isFilterModalOpen ? 'blur-effect' : ''}>
         <div className='flex justify-between'>
             <div className='flex gap-2'>
@@ -49,7 +49,7 @@ const Search = () => {
        </div>
        <div className=' mt-5'>
         <h1>Recent Search</h1>
-        <div className='flex flex-col sm:flex-row gap-3 mt-3'>
+        <div className='flex flex-wrap lg:justify-center gap-3 mt-3'>
             <p className='border rounded-2xl border-[#181C2E] px-4 py-2'>Burger</p>
             <p className='border rounded-2xl border-[#181C2E] px-4 py-2'>Pizza</p>
             <p className='border rounded-2xl border-[#181C2E] px-4 py-2'>Sushi</p>
