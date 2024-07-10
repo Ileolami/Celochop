@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
 #root {
   margin: 0 auto;
+
   color: #181C2E;
   background-color: #121223;
+
+  color: white;
+
   font-family: "Sen", sans-serif;
 }
-.house{
-  background-image: url('assets/Ellipse1005.svg'), url('assets/Vector142.png');
+.house {
+  background-image: url("assets/Ellipse1005.svg"), url("assets/Vector142.png");
   background-position: left top, right top; /* Adjust positions as needed */
   background-size: 30% 30%, 30% 30%; /* Adjust sizes as needed */
   background-repeat: no-repeat, no-repeat; /* Prevents the images from repeating */
