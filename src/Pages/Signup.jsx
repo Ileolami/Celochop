@@ -4,6 +4,8 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 import { FcGoogle } from "react-icons/fc"
 import { SiFacebook } from "react-icons/si";
 import { IoLogoApple } from "react-icons/io5";
+
+
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);

@@ -12,7 +12,7 @@ const Search = () => {
           <input
             type="text"
             placeholder="Search dishes, restaurant"
-            className="border-2 border-gray-400 w-full p-4 pl-14 rounded-md"
+            className="border-2 border-gray-400 w-full p-4 pl-14 rounded-md text-black"
           />
           <GrSearch size={24} className="absolute bottom-4 left-4 text-black" />
         </div>
