@@ -1,11 +1,28 @@
-import React from "react";
+import React,{ useState } from "react";
 import { Link } from "react-router-dom";
 import MostOrderedCard from "../reusables/Cards/MostOrderedCard";
 import foodData from "../data/food";
+import { publicClient } from "../Utils/Client";
+import  CeloAbi from '../Utils/CeloABI'
+import ContractAddress from '../Utils/ContractAddress'
 
 import { CiFilter } from "react-icons/ci";
 
 const MostOrdered = () => {
+
+  const { data } = async () => {
+    try {
+      const response = await publicClient.readContract({
+        address: ContractAddress,
+        abi: CeloAbi,
+        functionName: 'getItem',
+      });
+      console.log('response:', response);
+    } catch (error) {
+      console.error('Failed to read contract:', error);
+    }
+  };
+  
   return (
     <div className="my-6">
       <div className="space-y-3">
@@ -21,9 +38,9 @@ const MostOrdered = () => {
           </Link>
         </div>
 
-        <div className="flex items-cente gap-x-4 w-full overflow-auto py-3">
-          {foodData.map((restaurant) => (
-            <MostOrderedCard item={restaurant} key={restaurant.name} />
+        <div className="flex items-center gap-x-4 w-full overflow-auto py-3">
+          {data.map((item) => (
+            <MostOrderedCard key={item} item={item.name} />
           ))}
         </div>
       </div>

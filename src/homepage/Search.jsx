@@ -13,7 +13,7 @@ const Search = () => {
           <input
             type="text"
             placeholder="Search dishes, restaurant"
-            className=" outline-none w-full p-3 sm:p-4 pl-10 sm:pl-14 rounded-md text-black text-sm sm:text-base"
+            className=" outline-none w-full p-3 sm:p-4 bg-transparent pl-10 sm:pl-14 rounded-md text-black text-sm sm:text-base"
           />
         </div>
       </div>
