@@ -12,7 +12,7 @@ const starStyle = (isFilled) => ({
     borderRadius: '50%',
     outline: 'none',
     transition: 'background-color 0.3s ease',
-    fill: isFilled ? '#FF7622' : 'none', // Filled star color
+    fill: isFilled ? '#FF7622' : 'none', 
     clipPath: 'polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)', // Star shape
     backgroundColor: isFilled ? '#FF7622' : '#D9D9D9',
   });

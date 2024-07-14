@@ -8,6 +8,7 @@ import Start from '../assets/Star 1.png'
 import Cruchies from '../assets/image.png'
 import Desirable from '../assets/imageD.png'
 import Modal from '../Features/FilterModal'
+import { Link } from 'react-router-dom'
 
 const Search = () => {
      // State to control the visibility of the filter modal
@@ -22,9 +23,11 @@ const Search = () => {
        <div className={isFilterModalOpen ? 'blur-effect' : ''}>
         <div className='flex justify-between'>
             <div className='flex gap-2'>
+                <Link to='/homepage'>
                 <button className='flex items-center justify-center w-[40px] h-[40px] bg-[#ECF0F4] text-[#181C2E] rounded-full'>
                 <FontAwesomeIcon icon={faChevronLeft} />
                 </button>
+                </Link>
                 <h1 className='text-[17px] font-bold mt-2'>Search</h1>
             </div>
             <div className='relative '>

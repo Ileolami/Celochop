@@ -6,6 +6,8 @@ import Login from './Pages/Login';
 import Loading from './Features/Loading';
 import Homepage from './Pages/HomePage';
 import Search from './Pages/Search';
+import Profile from './Pages/Profile';
+import AddItem from './Pages/AddItem';
 import ConnectWallet from './Features/Connectwallet'
 
 function App() {
@@ -29,11 +31,14 @@ function App() {
       </div>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Signup />} />
+          {/* <Route path='/' element={<Signup />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/login' element={<Login />} />
-          <Route path='/search' element={<Search />} />
+          <Route path='/login' element={<Login />} />*/}
+          <Route path='/' element={<Homepage />} />
+          <Route path='/search' element={<Search />} /> 
           <Route path='/homepage' element={<Homepage />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/additem' element={<AddItem />} />
         </Routes>
       </BrowserRouter>
     </main>
