@@ -33,8 +33,9 @@ Chop Connect aims to serve small towns and localities in Nigeria, starting with 
   
 ### Additional Relevant Details
 
-Key Features: 
-Decentralized escrow service, delivery code verification, USSD payment with Minipay, custom coupon rewards, loyalty points, referral program with Soul-Bound Tokens, contest feature, and AI chatbot assistance.
+#### Key Features:
+
+Decentralized escrow service, delivery code verification, OTP payment with Minipay, custom coupon rewards, loyalty points, referral program with Soul-Bound Tokens, contest feature, and AI chatbot assistance.
 
 ### Target Audience: 
 Local residents of small towns in Nigeria, starting with Eket, and local SMEs seeking to expand their reach and modernize their delivery services.
