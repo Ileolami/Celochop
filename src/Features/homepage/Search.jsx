@@ -1,4 +1,4 @@
-import React,  { useEffect } from "react";
+import React from "react";
 import { GrSearch } from "react-icons/gr";
 
 const Search = () => {
