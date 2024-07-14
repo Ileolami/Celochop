@@ -12,7 +12,7 @@ const Navbar = () => {
     if (close) return null;
 
   return (
-    <div className="h-full fixed left-0 top-0 w-36 bg-[#FF7622] text-white">
+    <div className="h-full fixed left-0 top-0 w-2/4 bg-[#FF7622] text-white">
       <div className="flex justify-end p-2">
         <AiOutlineClose size={24} className="cursor-pointer border py-1 rounded-full hover:bg-[#181C2E]" onClick={CloseNavbar}/>
       </div>
