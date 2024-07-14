@@ -2,7 +2,7 @@ import React from "react";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import RecommendedCard from "../reusables/Cards/RecommendedCard";
-import foodData from "../../data/recommended";
+import foodData from "../data/recommended";
 
 const Recommended = () => {
   return (

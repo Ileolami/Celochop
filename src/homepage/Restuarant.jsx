@@ -3,7 +3,7 @@ import { RiArrowRightSLine } from "react-icons/ri";
 import { FaRegStar } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import restaurantData from "../../data/restuarant";
+import restaurantData from "../data/restuarant";
 import RestuarantCard from "../reusables/Cards/RestuarantCard";
 
 const Restuarant = () => {

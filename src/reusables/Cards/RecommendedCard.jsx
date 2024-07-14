@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
-import celo from "../../../../public/cello.svg";
+import celo from "../../assets/cello.svg";
 
 const renderStars = (rating) => {
   const fullStars = Math.floor(rating);

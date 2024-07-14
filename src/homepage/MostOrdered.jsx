@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import MostOrderedCard from "../reusables/Cards/MostOrderedCard";
-import foodData from "../../data/food";
+import foodData from "../data/food";
 
 import { CiFilter } from "react-icons/ci";
 
