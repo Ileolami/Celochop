@@ -29,11 +29,11 @@ const RecommendedCard = ({ item }) => {
   return (
     <div className="w-full flex justify-between gap-x-5 py-2">
       <div className="w-1/2 bg-red-400 rounded-lg"></div>
-      <div className="space-y-2 py-1">
+      <div className="space-y-2 py-1 w-1/2">
         <p className="text-gray-800 font-bold text-xl">{item.name}</p>
         <p className="text-gray-800 font-medium text-lg">{item.region}</p>
         <div className="mb-2">{renderStars(item.rating)}</div>
-        <div className="flex gap-x-5">
+        <div className="flex justify-between items-center">
           <p className="flex gap-x-2 text-gray-800 font-semibold">
             <img src={celo} alt="celo logo" className="" />
             {item.rating}

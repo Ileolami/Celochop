@@ -11,6 +11,13 @@
   background-repeat: no-repeat, no-repeat; /* Prevents the images from repeating */
 }
 
+.homeModal {
+  background-image: url("../public/Elements.svg");
+  background-position: left top, right top; /* Adjust positions as needed */
+  background-size: 30% 30%, 30% 30%; /* Adjust sizes as needed */
+  background-repeat: no-repeat, no-repeat; /* Prevents the images from repeating */
+}
+
 @keyframes moveRight {
   from {
     transform: translateX(0);

@@ -21,7 +21,7 @@ const Recommended = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-x-4 w-full overflow-auto py-3">
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center w-full overflow-auto py-3">
           {foodData.map((restaurant) => (
             <RecommendedCard item={restaurant} key={restaurant.name} />
           ))}

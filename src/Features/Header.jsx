@@ -12,7 +12,7 @@ const Header = () => {
         </span>
 
         <div className="">
-          <p className="text-orange-500">DELIVER TO</p>
+          <p className="text-orange-500 font-semibold">DELIVER TO</p>
           <p className="text-gray-400 flex items-center gap-x-1">
             NEW YORK, NY{" "}
             <span className="text-gray-900">

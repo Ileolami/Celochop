@@ -1,6 +1,6 @@
 const foodData = [
   {
-    name: "Spaghetti",
+    name: "Spaghetti Cornadara",
     region: "Italy",
     rating: 4.5,
     delivery: "Free",
