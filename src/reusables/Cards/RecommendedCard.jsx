@@ -1,7 +1,7 @@
 import React from "react";
 import { FaRegStar, FaStar, FaStarHalfAlt } from "react-icons/fa";
 import { TbTruckDelivery } from "react-icons/tb";
-import celo from "../../../../public/cello.svg";
+import celo from "../../assets/cello.svg";
 
 const renderStars = (rating) => {
   const fullStars = Math.floor(rating);
@@ -27,7 +27,7 @@ const renderStars = (rating) => {
 
 const RecommendedCard = ({ item }) => {
   return (
-    <div className="w-full flex justify-between gap-x-5 py-2">
+    <div className="w-full flex  gap-x-5 py-2">
       <div className="w-1/2 bg-red-400 rounded-lg"></div>
       <div className="space-y-2 py-1 w-1/2">
         <p className="text-gray-800 font-bold text-xl">{item.name}</p>

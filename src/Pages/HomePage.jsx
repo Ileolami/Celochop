@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useModal } from "../context/modal";
 import Header from "../Features/Header";
-import Search from "../Features/homepage/Search";
-import Categories from "../Features/homepage/Categories";
-import Restuarant from "../Features/homepage/Restuarant";
-import MostOrdered from "../Features/homepage/MostOrdered";
-import Recommended from "../Features/homepage/Recommended";
+import Search from "../homepage/Search";
+import Categories from "../homepage/Categories";
+import Restuarant from "../homepage/Restuarant";
+import MostOrdered from "../homepage/MostOrdered";
+import Recommended from "../homepage/Recommended";
 import Modal from "../Features/reusables/modal/modal";
 import { IoClose } from "react-icons/io5";
 
@@ -23,7 +23,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="bg-white mx-5 mb-10 p-5 min-h-screen rounded-2xl shadow-xl shadow-black">
       <Header />
       <Search />
       <Categories />

@@ -1,6 +1,11 @@
 import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
+import { FcGoogle } from "react-icons/fc"
+import { SiFacebook } from "react-icons/si";
+import { IoLogoApple } from "react-icons/io5";
+
+
 const Signup = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
@@ -14,7 +19,7 @@ const Signup = () => {
 
   return (
     <div className='flex flex-col justify-end items-center'>
-      <form action="" className='mx-20 my-10 bg-white text-[#32343E] rounded-lg w-96'>
+      <form action="" className='mx-20 my-10 bg-white text-[#32343E] rounded-2xl w-96'>
         <div className='flex flex-col m-5 gap-2'>
          
          <label htmlFor="Name" className=' ml-5'>NAME</label>
@@ -48,6 +53,12 @@ const Signup = () => {
           <div className='text-center'>
           <button type='submit' className='w-72  px-5 py-3 text-white bg-[#FF7622] rounded-md m-2'>SIGN UP</button>
           </div>
+          <p className='text-center'>Already have an account? <a href='/login' className='text-[#FF7622] font-bold'>Login</a></p>
+          <div className="flex justify-center gap-6 m-5">
+            <SiFacebook className='h-[40px] w-[40px]' />
+            <FcGoogle className='h-[40px] w-[40px]' />
+            <IoLogoApple className='h-[40px] w-[40px]' />
+        </div>
         </div>
       </form>
     </div>

@@ -1,8 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap");
+
+
 #root {
   margin: 0 auto;
   color: white;
+  
   font-family: "Sen", sans-serif;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #121223;
+  font-family: "Sen", sans-serif;
+
 }
 .house {
   background-image: url("assets/Ellipse1005.svg"), url("assets/Vector142.png");
@@ -28,4 +39,7 @@
 }
 .animate-moveRight {
   animation: moveRight 6s infinite linear; /* Adjust time and other properties as needed */
+}
+.blur-effect {
+  filter: blur(8px);
 }

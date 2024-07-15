@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
-import Signup from "./Pages/Signup";
-import Login from "./Pages/Login";
-import Loading from "./Features/Loading";
-import HomePage from "./Pages/HomePage";
-import AuthLayout from "./Features/reusables/layout/AuthLayout";
-import PageLayout from "./Features/reusables/layout/PageLayout";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
+import Signup from './Pages/Signup';
+import Login from './Pages/Login';
+import Loading from './Features/Loading';
+import Homepage from './Pages/HomePage';
+import Search from './Pages/Search';
+import Profile from './Pages/Profile';
+import AddItem from './Pages/AddItem';
+import ConnectWallet from './Features/Connectwallet'
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -23,18 +25,20 @@ function App() {
     return <Loading />;
   }
   return (
-    <main className="min-h-screen">
+    <main className='min-h-screen house'>
+      <div className=''>
+       <ConnectWallet /> 
+      </div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<AuthLayout />}>
-            <Route path="/" element={<Signup />} />
-            <Route path="/signup" element={<Signup />} />
-            <Route path="/login" element={<Login />} />
-          </Route>
-
-          <Route path="/" element={<PageLayout />}>
-            <Route path="/home" element={<HomePage />} />
-          </Route>
+          {/* <Route path='/' element={<Signup />} />
+          <Route path='/signup' element={<Signup />} />
+          <Route path='/login' element={<Login />} />*/}
+          <Route path='/' element={<Homepage />} />
+          <Route path='/search' element={<Search />} /> 
+          <Route path='/homepage' element={<Homepage />} />
+          <Route path='/profile' element={<Profile />} />
+          <Route path='/additem' element={<AddItem />} />
         </Routes>
       </BrowserRouter>
     </main>

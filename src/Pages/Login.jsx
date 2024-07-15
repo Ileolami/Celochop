@@ -12,10 +12,9 @@ const Login = () => {
     };
   
     return (
-      <div className='flex flex-col justify-end items-center'>
-        <form action="" className='mx-20 my-10 bg-white text-[#32343E] rounded-lg w-96'>
-          <div className='flex flex-col m-5 gap-2'>
-           
+      <div className='flex flex-col justify-end items-center shadow-lg shadow-white'>
+        <form action="" className='mx-20 my-10 bg-white text-[#32343E] rounded-2xl w-96'>
+          <div className='flex flex-col m-5 gap-2'>        
             <label htmlFor="Email" className='ml-5'>EMAIL</label>
             <input type="email" name="Email" id="Email" className=' px-5 bg-[#F0F5FA] rounded-md m-2 outline-none h-16'/>
             
@@ -34,13 +33,13 @@ const Login = () => {
                     <input type="checkbox" name="" id=""  />
                     <label htmlFor="Remember">Remember Me</label>
                 </div>
-                <a href="#" className="text-[#FF7622]">Forgot Password?</a>
+                <a href="#" className="text-[#FF7622]">Forgot Password?&amp;apos;</a>
             </div>
   
             <div className='text-center'>
             <button type='submit' className='w-72 tracking-[10px] px-5 py-3 text-white bg-[#FF7622] rounded-md m-2 '>LOGIN</button>
             </div>
-            <p className='text-center'>Don't You have an account? <a href='/signup' className='text-[#FF7622] font-bold'>Sign up</a></p>
+            <p className='text-center'>Don&apos;t You have an account? <a href='/signup' className='text-[#FF7622] font-bold'>Sign up</a></p>
           </div>
           <h2 className='text-center tracking-wider text-xl font-bold'>or</h2>
           <div className="flex justify-center gap-6 m-5">

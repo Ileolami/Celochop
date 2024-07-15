@@ -1,19 +1,17 @@
 import React from "react";
 import { RiArrowRightSLine } from "react-icons/ri";
-import { FaRegStar } from "react-icons/fa";
-import { TbTruckDelivery } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import restaurantData from "../../data/restuarant";
-import RestuarantCard from "../reusables/Cards/RestuarantCard";
+import RecommendedCard from "../reusables/Cards/RecommendedCard";
+import foodData from "../data/recommended";
 
-const Restuarant = () => {
+const Recommended = () => {
   return (
     <div>
       <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <p className="text-gray-800">Restaurants</p>
+          <p className="text-gray-800">Recommended</p>
           <Link
-            to="/restaurants"
+            to="/recommended"
             className="flex items-center gap-x-1 text-gray-700 font-medium hover:border-b-[1px] border-b-gray-700 pb-[0.5px] w-fit"
           >
             See all{" "}
@@ -23,9 +21,9 @@ const Restuarant = () => {
           </Link>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 items-center gap-x-4 w-full overflow-auto py-3">
-          {restaurantData.map((restaurant) => (
-            <RestuarantCard item={restaurant} key={restaurant.name} />
+        <div className="grid grid-cols-1 lg:grid-cols-3 items-center w-full overflow-auto py-3">
+          {foodData.map((restaurant) => (
+            <RecommendedCard item={restaurant} key={restaurant.name} />
           ))}
         </div>
       </div>
@@ -33,4 +31,4 @@ const Restuarant = () => {
   );
 };
 
-export default Restuarant;
+export default Recommended;
