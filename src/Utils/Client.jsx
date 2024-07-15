@@ -12,4 +12,4 @@ export const walletClient = createWalletClient({
   transport: custom(window.ethereum),
 })
 
-export const [account] = await walletClient.getAddresses()
+export const [ account ] = await walletClient.getAddresses()

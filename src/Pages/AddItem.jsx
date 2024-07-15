@@ -12,6 +12,7 @@ const AddItem = () => {
   const contractAddress = ContractAddress;
   const [foodName, setFoodName] = useState('');
   const [foodPrice, setFoodPrice] = useState('');
+  const [foodDescription, setFoodDescription] = useState('');
   const [foodImage, setFoodImage] = useState(null);
   const navigate = useNavigate();
   
@@ -22,11 +23,11 @@ const AddItem = () => {
     // Ensure foodPrice is a BigInt
     const bigIntFoodPrice = BigInt(foodPrice);
     const { request } = await publicClient.simulateContract({
+      account,
       address: contractAddress,
       abi: CeloAbi, 
       functionName: 'addItem', 
       args: [account,foodName, bigIntFoodPrice], 
-      account, 
     });
 
     const response = await walletClient.writeContract(request);
@@ -71,6 +72,15 @@ const AddItem = () => {
               placeholder='$10'
               onChange={(e) => setFoodPrice(e.target.value)}
               required
+              className="shadow appearance-none border rounded w-80 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="foodDescription" className="block text-[#FF7622] text-left text-md font-bold mb-2 tracking-wider">Food Description</label>
+            <textarea
+              id="foodDescription"
+              value={foodDescription}
+              placeholder='This is jollof made with tomatoes, cucumbers, and onions.'
               className="shadow appearance-none border rounded w-80 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
             />
           </div>

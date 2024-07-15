@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useModal } from "../context/modal";
+import { useModal } from "../Context/modal";
 import Header from "../Features/Header";
 import Search from "../homepage/Search";
 import Categories from "../homepage/Categories";

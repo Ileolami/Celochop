@@ -1,4 +1,4 @@
-import { useModal } from "../../../context/modal";
+import { useModal } from "../../../Context/modal";
 import React from "react";
 
 const Modal = ({ children }) => {

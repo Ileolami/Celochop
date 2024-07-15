@@ -4,7 +4,6 @@ import MostOrderedCard from "../reusables/Cards/MostOrderedCard";
 import foodData from "../data/food";
 import { publicClient } from "../Utils/Client";
 // import CeloAbi from "../Utils/CeloABI";
-import { address } from "../Utils/Client";
 import { celoABI } from "../Utils";
 import ContractAddress from "../Utils/ContractAddress";
 

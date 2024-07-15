@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { ModalProvider } from "./context/modal";
+import { ModalProvider } from "./Context/modal.jsx";
 import App from "./App.jsx";
 import "./index.css";
 import ABI from "./Utils/CeloABI.json";
