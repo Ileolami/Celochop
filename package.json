@@ -19,7 +19,7 @@
     "react-icons": "^5.2.1",
     "react-router-dom": "^6.24.1",
     "thirdweb": "^5.33.0",
-    "viem": "^2.17.3"
+    "viem": "^2.17.4"
   },
   "devDependencies": {
     "@types/react": "^18.3.3",
