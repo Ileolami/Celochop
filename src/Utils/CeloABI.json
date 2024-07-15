@@ -16,7 +16,7 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "id",
+				"name": "restid",
 				"type": "uint256"
 			},
 			{
@@ -28,6 +28,11 @@
 				"internalType": "uint256",
 				"name": "price",
 				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "ipfsHash",
+				"type": "string"
 			}
 		],
 		"name": "addItem",
@@ -51,6 +56,11 @@
 				"internalType": "uint256",
 				"name": "_areaId",
 				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "_ipfsHash",
+				"type": "string"
 			}
 		],
 		"name": "addRestaurant",
@@ -72,6 +82,42 @@
 			}
 		],
 		"name": "approve",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "_to",
+				"type": "address"
+			},
+			{
+				"internalType": "string",
+				"name": "tokenURI",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "restaurantId",
+				"type": "uint256"
+			}
+		],
+		"name": "awardNFT",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "orderId",
+				"type": "uint256"
+			}
+		],
+		"name": "cancelOrder",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -241,19 +287,6 @@
 		"type": "event"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "orderId",
-				"type": "uint256"
-			}
-		],
-		"name": "approveOrder",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"anonymous": false,
 		"inputs": [
 			{
@@ -273,34 +306,94 @@
 		"type": "event"
 	},
 	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "orderId",
-				"type": "uint256"
-			}
-		],
-		"name": "cancelOrder",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "orderId",
-				"type": "uint256"
-			}
-		],
-		"name": "confirmPickup",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
-	},
-	{
 		"inputs": [],
 		"name": "declareWinner",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "restaurantId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "itemId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "price",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "ipfsHash",
+				"type": "string"
+			}
+		],
+		"name": "FoodListed",
+		"type": "event"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "restId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "uint256",
+				"name": "itemId",
+				"type": "uint256"
+			}
+		],
+		"name": "listFoodForSale",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "_id",
+				"type": "uint256"
+			}
+		],
+		"name": "listRestaurant",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "uint256",
+				"name": "orderId",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "verificationCode",
+				"type": "string"
+			}
+		],
+		"name": "markOrderAsDelivered",
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
@@ -473,6 +566,11 @@
 	{
 		"inputs": [
 			{
+				"internalType": "uint256",
+				"name": "restaurantId",
+				"type": "uint256"
+			},
+			{
 				"internalType": "uint256[]",
 				"name": "items",
 				"type": "uint256[]"
@@ -493,11 +591,6 @@
 				"type": "string"
 			},
 			{
-				"internalType": "uint256",
-				"name": "restId",
-				"type": "uint256"
-			},
-			{
 				"internalType": "string",
 				"name": "verificationCode",
 				"type": "string"
@@ -512,7 +605,17 @@
 		"inputs": [
 			{
 				"internalType": "string",
-				"name": "userId",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "addr",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "ipfsHash",
 				"type": "string"
 			}
 		],
@@ -520,6 +623,37 @@
 		"outputs": [],
 		"stateMutability": "nonpayable",
 		"type": "function"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "uint256",
+				"name": "restaurantId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "addr",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "ipfsHash",
+				"type": "string"
+			}
+		],
+		"name": "RestaurantListed",
+		"type": "event"
 	},
 	{
 		"inputs": [
@@ -656,24 +790,6 @@
 		],
 		"name": "UserRegistered",
 		"type": "event"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "orderId",
-				"type": "uint256"
-			},
-			{
-				"internalType": "string",
-				"name": "verificationCode",
-				"type": "string"
-			}
-		],
-		"name": "verifyDelivery",
-		"outputs": [],
-		"stateMutability": "nonpayable",
-		"type": "function"
 	},
 	{
 		"inputs": [
@@ -843,6 +959,11 @@
 				"internalType": "uint256",
 				"name": "price",
 				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "ipfsHash",
+				"type": "string"
 			}
 		],
 		"stateMutability": "view",
@@ -887,6 +1008,45 @@
 				"internalType": "bool",
 				"name": "highlighted",
 				"type": "bool"
+			},
+			{
+				"internalType": "string",
+				"name": "ipfsHash",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "userAddress",
+				"type": "address"
+			}
+		],
+		"name": "getUserDetails",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			},
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
 			}
 		],
 		"stateMutability": "view",
@@ -1031,25 +1191,6 @@
 		"inputs": [
 			{
 				"internalType": "uint256",
-				"name": "",
-				"type": "uint256"
-			}
-		],
-		"name": "orderVerificationCodes",
-		"outputs": [
-			{
-				"internalType": "string",
-				"name": "",
-				"type": "string"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
 				"name": "tokenId",
 				"type": "uint256"
 			}
@@ -1093,6 +1234,11 @@
 			{
 				"internalType": "string",
 				"name": "addr",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "ipfsHash",
 				"type": "string"
 			},
 			{
@@ -1178,25 +1324,6 @@
 				"type": "uint256"
 			}
 		],
-		"name": "tokenExists",
-		"outputs": [
-			{
-				"internalType": "bool",
-				"name": "",
-				"type": "bool"
-			}
-		],
-		"stateMutability": "view",
-		"type": "function"
-	},
-	{
-		"inputs": [
-			{
-				"internalType": "uint256",
-				"name": "tokenId",
-				"type": "uint256"
-			}
-		],
 		"name": "tokenURI",
 		"outputs": [
 			{
@@ -1220,6 +1347,11 @@
 		"outputs": [
 			{
 				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
 				"name": "addr",
 				"type": "string"
 			},
@@ -1227,6 +1359,11 @@
 				"internalType": "uint256",
 				"name": "loyaltyPoints",
 				"type": "uint256"
+			},
+			{
+				"internalType": "string",
+				"name": "ipfsHash",
+				"type": "string"
 			}
 		],
 		"stateMutability": "view",

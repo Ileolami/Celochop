@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import MostOrderedCard from "../reusables/Cards/MostOrderedCard";
 import foodData from "../data/food";
 import { publicClient } from "../Utils/Client";
-// import CeloAbi from "../Utils/CeloABI";
 import { celoABI } from "../Utils";
 import ContractAddress from "../Utils/ContractAddress";
 
@@ -16,6 +15,7 @@ const MostOrdered = () => {
         address: ContractAddress,
         abi: celoABI,
         functionName: "getItem",
+        args: [1, 20]
       });
       console.log("response:", response);
     } catch (error) {
@@ -27,7 +27,7 @@ const MostOrdered = () => {
     result();
   }, []);
 
-  console.log(result);
+  //console.log(result);
 
   return (
     <div className="my-6">
