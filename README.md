@@ -121,9 +121,9 @@ Our journey began with a brainstorming session during the hackathon, where we al
   * Continuously gather user feedback and iterate on the platform to enhance user experience and functionality.
 
 ### Try Out Links
-* **[Product Demo]((https://youtu.be/lk16PzYmErg?si=q2pYm7m68WwSwmae))**
+* **[Product Demo](https://youtu.be/lk16PzYmErg?si=q2pYm7m68WwSwmae)**
 
-* **[Smart contract gist]((https://gist.github.com/nafkem/1eca8b94b121271b9bd0704a023660fe))**
+* **[Smart contract gist](https://gist.github.com/nafkem/1eca8b94b121271b9bd0704a023660fe)**
 
 ### Lessons Learned
 
