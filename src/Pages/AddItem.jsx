@@ -28,14 +28,12 @@ const AddItem = () => {
   e.preventDefault();
   console.log('foodName:', foodName, 'account:', account, 'foodPrice:', foodPrice); // Debugging line
   try {
-  
-
     const { request } = await publicClient.simulateContract({
+      account,
       address: contractAddress,
       abi: CeloAbi,
       functionName: 'addItem',
       args: [foodName, foodAddress, foodPrice, foodImage ],
-      account,
     });
 
     const response = await walletClient.writeContract(request);
