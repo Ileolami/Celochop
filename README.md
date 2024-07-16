@@ -66,7 +66,6 @@ Our journey began with a brainstorming session during the hackathon, where we al
 
 #### Blockchain Integration
 
-* **Celo Composer:** To integrate Minipay for seamless OTP payments.
 * **Solidity:** For writing the smart contracts.
 * **Metamask Wallet:** For testing and interactions with the blockchain.
 * **Remix IDE:** For developing and deploying smart contracts.
@@ -122,9 +121,9 @@ Our journey began with a brainstorming session during the hackathon, where we al
   * Continuously gather user feedback and iterate on the platform to enhance user experience and functionality.
 
 ### Try Out Links
-* **[Figma File]((https://www.figma.com/design/YUj8bvy1ZOHFuZWoGo5vvn/Food-Hackerthon-stuff?node-id=0-1&t=2vj1VCUIffRyPl9K-1))**
+* **[Product Demo]((https://youtu.be/lk16PzYmErg?si=q2pYm7m68WwSwmae))**
 
-* **[Smart contract gist ]((https://gist.github.com/nafkem/1eca8b94b121271b9bd0704a023660fe))**
+* **[Smart contract gist]((https://gist.github.com/nafkem/1eca8b94b121271b9bd0704a023660fe))**
 
 ### Lessons Learned
 
