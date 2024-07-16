@@ -121,6 +121,11 @@ Our journey began with a brainstorming session during the hackathon, where we al
   * Begin operations in Eket, followed by expansion to other small towns in Nigeria.
   * Continuously gather user feedback and iterate on the platform to enhance user experience and functionality.
 
+### Try Out Links
+* **[Figma File]((https://www.figma.com/design/YUj8bvy1ZOHFuZWoGo5vvn/Food-Hackerthon-stuff?node-id=0-1&t=2vj1VCUIffRyPl9K-1))**
+
+* **[Smart contract gist ]((https://gist.github.com/nafkem/1eca8b94b121271b9bd0704a023660fe))**
+
 ### Lessons Learned
 
 * **Working Together:** We learned how to work effectively in cross-functional teams, enhancing collaboration and communication.
