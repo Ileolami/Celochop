@@ -9,7 +9,7 @@ export const publicClient = createPublicClient({
 
 export const walletClient = createWalletClient({
   chain: celoAlfajores,
-  transport: custom(window.ethereum),
+  transport: custom(window.ethereum || window.ethereum.isMinipay),
 })
 
-export const [account] = await walletClient.getAddresses();
+export const [ account ] = await walletClient.getAddresses();

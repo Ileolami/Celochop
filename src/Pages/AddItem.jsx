@@ -33,13 +33,13 @@ const AddItem = () => {
       address: contractAddress,
       abi: CeloAbi,
       functionName: 'addItem',
-      args: [foodName, foodAddress, foodPrice, foodImage ],
+      args: [1, 'new york', 20, 'www.image.com'],
     });
 
     const response = await walletClient.writeContract(request);
     console.log('Item added to contract:', response);
-    alert('Item added to contract');
-    navigate('/homepage');
+    // alert('Item added to contract');
+    // navigate('/homepage');
   } catch (error) {
     console.error('Failed to add item to contract:', error);
   }
